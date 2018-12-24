@@ -1,0 +1,75 @@
+p{
+    white-space: normal;
+    overflow:hidden ;
+    text-align: justify;
+}
+
+
+.thick-green-border {
+    border-color: #f2cbbc;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
+}
+article{
+    margin-bottom: 5em;
+}
+
+.smaller-image {
+    width: 200px;
+    float: left;
+    margin: 20px;
+}
+
+.smaller-image-right {
+    width: 300px;
+    float: right;
+    margin: 20px;
+}
+
+#brand{
+    font-family: 'Lobster', cursive;
+    color: #f2cbbc;
+}
+
+.navbar-default {
+    background-color: #b0aac2;
+    border-color: #9068be;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+footer{
+    background-color:#b0aac2 ;
+    border-color: #9068be;
+}
+.modal-footer{
+    color: white;
+}
+
+i{
+    position: left;
+}
+
+body{
+    background: url("https://i.imgur.com/XNLBKqe.jpg")repeat fixed center center
+}
+
+.modal.in .modal-dialog{
+    width: 50%;
+}
+
+.modal-title{
+    font-family: 'Lobster', cursive;
+    font-size: 28px;
+    color:pink;
+}
+
+.field{
+    margin-top: 100px;
+}

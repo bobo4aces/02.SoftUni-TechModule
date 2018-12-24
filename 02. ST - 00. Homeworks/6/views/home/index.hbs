@@ -1,0 +1,58 @@
+<div class="container body-content span=8 offset=2">
+    <div class="well">
+        <form class="form-inline" action="/" method="POST" autocomplete="off">
+            <fieldset>
+                <div class="form-group">
+                    <div class="col-sm-1 ">
+                        <input type="text" class="form-control" id="leftOperand" placeholder="Left Operand"
+                               name="calculator[leftOperand]" value="{{calculator.leftOperand}}"
+                        pattern="[0-9.]+">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4 ">
+                        <select class="form-control" name="calculator[operator]">
+                            <option value="+"{{selectif calculator.operator '+'}}>+</option>
+                            <option value="-"{{selectif calculator.operator '-'}}>-</option>
+                            <option value="*"{{selectif calculator.operator '*'}}>*</option>
+                            <option value="/"{{selectif calculator.operator '/'}}>/</option>
+                            <option value="pow"{{selectif calculator.operator 'pow'}}>pow</option>
+                            <option value="max"{{selectif calculator.operator 'max'}}>max</option>
+                            <option value="min"{{selectif calculator.operator 'min'}}>min</option>
+                            <option value="Rectangle Area"{{selectif calculator.operator 'Rectangle Area'}}>Rect Area</option>
+                            <option value="Rectangle Perimeter"{{selectif calculator.operator 'Rectangle Perimeter'}}>Rect Peri</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4 ">
+                        <input type="text" class="form-control" id="rightOperand" placeholder="Right Operand"
+                               name="calculator[rightOperand]" value="{{calculator.rightOperand}}"
+                               pattern="[0-9.]+">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-2 ">
+                        <p>=</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4 ">
+                        <input type="text" class="form-control" id="result" placeholder="Result"
+                               name="result" value="{{result}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <button type="submit" class="btn btn-primary">Calculate</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

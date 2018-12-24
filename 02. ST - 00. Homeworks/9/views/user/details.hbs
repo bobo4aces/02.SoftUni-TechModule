@@ -1,0 +1,142 @@
+
+<style>
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+<script>
+    // Get the modal
+
+
+    // Get the button that opens the modal
+
+
+    // Get the <span> element that closes the modal
+    function end() {
+        let f = document.getElementById("f");
+        let modal = document.getElementById('myModal');
+        f.reset();
+        modal.style.display = "none";
+    };
+
+    // When the user clicks on the button, open the modal
+    function show() {
+
+
+
+        /* let input = document.getElementById("mail").value;
+         let output = document.getElementById("text");
+         output.innerHTML=input;*/
+        let modal = document.getElementById('myModal');
+        modal.style.display = "block";
+    };
+    function validateForm() {
+        let isValid = true;
+let f = document.getElementById('f')
+        if(f.email.value===""||f.fullName.value===""||f.password.value===""){
+    return false
+        }
+        return true;
+    }
+    // When the user clicks on <span> (x), close the modal
+    function hide() {
+
+        let f = document.getElementById("f");
+        let modal = document.getElementById('myModal');
+if(validateForm()===true){
+        f.submit();}else{
+alert("all fields are required");
+}
+        modal.style.display = "none";
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
+<div class="container body-content span=8 offset=2">
+    <div class="well">
+        <form class="form-horizontal" id="f" method="post" action="/user/details">
+            <fieldset>
+                <legend>Update Profile</legend>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">New Email</label>
+                    <div class="col-sm-4 ">
+                        <input  type="hidden" name="originalname" value="{{user.id}}" />
+
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email" name="email" required/>
+                        <label for="inputEmail">Old Email: {{user.email}}</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">New Password</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" value=""
+                               name="password" required>
+                        <label for="inputPassword">For More Security we hide your password</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">New Name</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="inputName" placeholder="Name" value=""
+                               name="fullName">
+                        <label for="inputName">Old Name: {{user.fullName}}</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <a class="btn btn-default" href="/">Cancel</a>
+                        <button type="button"onclick="show()" class="btn btn-primary">Update</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div align="center">
+                    <p id="text">Are you Sure?</p>
+                    <button  id="btn-cancel" onclick="end()"class="btn btn-secondary">Cancel</button>
+                    <button id="btn-submit" onclick="hide()" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+    </div>
+</div>

@@ -1,0 +1,148 @@
+<style>
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+<script>
+    // Get the modal
+
+
+    // Get the button that opens the modal
+
+
+    // Get the <span> element that closes the modal
+    function end() {
+        let f = document.getElementById("f");
+        let modal = document.getElementById('myModal');
+        f.reset();
+        modal.style.display = "none";
+    };
+
+    // When the user clicks on the button, open the modal
+    function show() {
+
+
+
+        /* let input = document.getElementById("mail").value;
+         let output = document.getElementById("text");
+         output.innerHTML=input;*/
+        let modal = document.getElementById('myModal');
+        modal.style.display = "block";
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    function validateForm() {
+        let isValid = true;
+        let f = document.getElementById('f')
+        if(f.email.value===""||f.fullName.value===""||f.password.value===""){
+            return false
+        }
+        return true;
+    }
+    // When the user clicks on <span> (x), close the modal
+    function hide() {
+
+        let f = document.getElementById("f");
+        let modal = document.getElementById('myModal');
+        if(validateForm()===true){
+            if(f.repeatedPassword.value!=f.password.value){
+                alert("passwords doesn't math");
+            }else{
+            f.submit();}}else{
+            alert("all fields are required");
+        }
+        modal.style.display = "none";
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
+<div class="container body-content span=8 offset=2">
+    <div class="well">
+        <form class="form-horizontal" id="f" method="post" action="/user/register">
+            <fieldset>
+                <legend>Register</legend>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="inputEmail">Email</label>
+                    <div class="col-sm-4 ">
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email" name="email" required value={{email}} >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="inputFullName">Full Name</label>
+                    <div class="col-sm-4 ">
+                        <input type="text" class="form-control" id="inputFullName" placeholder="Full Name" required name="fullName" value={{fullName}}>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="inputPassword">Password</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" required name="password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Confirm Password</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password" required name="repeatedPassword">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <a href="/" class="btn btn-default">Cancel</a>
+                        <button type="button" onclick="show()" id="myBtn" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+       <!-- <button id="myBtn" class="btn btn-primary" onclick="show()">Submit</button>-->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div align="center">
+                    <p id="text">Are you Sure?</p>
+                    <button  id="btn-cancel" onclick="end()"class="btn btn-secondary">Cancel</button>
+                    <button id="btn-submit" onclick="hide()" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
