@@ -1,4 +1,13 @@
 # 02.SoftUni-TechModule
+# Programming Fundamentals
+The “Programming Fundamentals” course extends the previously gained basic coding skills from the “Programming Basics” course at the Software University and adds additional knowledge and practical programming skills.
+
+The course covers understanding the basic data types in programming, extracting pieces of code into methods with parameters and return value, using the debugger to trace the program execution and find bugs, processing sequences of elements using arrays and lists, using collections, working with matrices for processing tabular data, working with dictionaries to map keys to values, using strings for text processing, and the basics of working with classes and objects, using API classes and defining simple classes.
+
+Along with the programming techniques, the algorithmic thinking and problem solving skills are advanced by solving hundreds of practical programming problems. All exercises and exams are automatically evaluated with real-time feedback through the SoftUni online judge system. At the end all students take a practical programming exam.
+
+
+
 # Software Technologies
 The "Software Technologies" course provides initial knowledge of the most used software technologies in practice and allows students to orientate which technologies they like to study them more thoroughly. Basic concepts from front-end and back-end development are studied. The course consists of four parts: HTML5 development (HTML + CSS + JavaScript + AJAX + REST), PHP web development (PHP + MySQL), C # Web development (ASP.NET MVC + Entity Framework + SQL Server) Java + Spring MVC + Hibernate + MySQL).
 
@@ -11,11 +20,3 @@ In the next few topics, students are introduced to PHP and MySQL. After installi
 After passing through these topics, students get acquainted with C # Web development. It starts with a practical understanding of MS SQL Server and the Entity Framework technology for data access from C # applications. Below are the basics of ASP.NET MVC server application development technology - views, controls, models, forms, data access, user registration, and login. Following is the development of a practical project - a simple blog system based on ASP.NET MVC, Entity Framework and SQL Server.
 
 In the last few topics, students are introduced to Java Web development. It starts with a short introduction to the Java language - syntax, variables, conditional constructs, cycles, arrays, lists, classes and objects. Next is the introduction to Hibernate ORM and access to MySQL database from Java. Continued with Java Web Applications (Servlets / JSP) and Java MVC Web Development Technology. Following is the development of a practical project - a simple blog system based on Java, Spring MVC, Hibernate and MySQL.
-
-
-# Programming Fundamentals
-The “Programming Fundamentals” course extends the previously gained basic coding skills from the “Programming Basics” course at the Software University and adds additional knowledge and practical programming skills.
-
-The course covers understanding the basic data types in programming, extracting pieces of code into methods with parameters and return value, using the debugger to trace the program execution and find bugs, processing sequences of elements using arrays and lists, using collections, working with matrices for processing tabular data, working with dictionaries to map keys to values, using strings for text processing, and the basics of working with classes and objects, using API classes and defining simple classes.
-
-Along with the programming techniques, the algorithmic thinking and problem solving skills are advanced by solving hundreds of practical programming problems. All exercises and exams are automatically evaluated with real-time feedback through the SoftUni online judge system. At the end all students take a practical programming exam.
